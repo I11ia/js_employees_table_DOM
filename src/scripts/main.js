@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 const table = document.querySelector('table');
 const tbody = table.tBodies[0];
 const thead = table.tHead;
@@ -111,7 +109,7 @@ form.onsubmit = (e) => {
     return;
   }
 
-  if (position.value.trim().length < 4) {
+  if (!position.value.trim()) {
     showNotification('Position must be at least 4 characters', 'error');
 
     return;
